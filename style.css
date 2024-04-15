@@ -39,6 +39,9 @@ a {
 .bg-slate-400 {
   background-color: rgb(148 163 184);
 }
+.bg-gray-mo {
+  background-color: #181a1b;
+}
 .hover\:text-slate-500:hover {
   color: rgb(100 116 139);
 }
