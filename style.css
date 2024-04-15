@@ -6,8 +6,13 @@
 body {
   overflow-x: hidden;
 }
-.bg-neutral-900 {
-  background-color: rgb(23 23 23);
+@font-face {
+  font-family: "coopper-hewitt-heavy";
+  src: url("src/public/fonts/CooperHewitt-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "coopper-hewitt-light";
+  src: url("src/public/fonts/CooperHewitt-Light.otf") format("opentype");
 }
 canvas {
   position: absolute;
@@ -15,4 +20,28 @@ canvas {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+h1 {
+  font-family: "coopper-hewitt-heavy";
+}
+h2 {
+  font-family: "coopper-hewitt-heavy";
+}
+p {
+  font-family: "coopper-hewitt-light";
+}
+a {
+  font-family: "coopper-hewitt-light";
+}
+.bg-neutral-900 {
+  background-color: rgb(23 23 23);
+}
+.bg-slate-400 {
+  background-color: rgb(148 163 184);
+}
+.hover\:text-slate-500:hover {
+  color: rgb(100 116 139);
+}
+.hover\:text-slate-300:hover {
+  color: rgb(203 213 225);
 }

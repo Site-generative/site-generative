@@ -16,7 +16,13 @@ for (var i = 0; i < dotCount; i++) {
 
 // dots animation
 function render() {
-  context.fillStyle = "#212121";
+  // Set background gradient
+  var gradient = context.createLinearGradient(0, 0, maxx, maxy);
+  gradient.addColorStop(0.112, "rgb(69, 86, 102)");
+  gradient.addColorStop(0.512, "rgb(34, 34, 34)");
+  gradient.addColorStop(0.986, "rgb(0, 0, 0)");
+
+  context.fillStyle = gradient;
   context.fillRect(0, 0, maxx, maxy);
   for (var i = 0; i < dotCount; i++) {
     dots[i].draw();

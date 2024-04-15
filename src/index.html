@@ -21,15 +21,15 @@
   </head>
   <body class="bg-neutral-900 flex flex-col">
     <!--Header Sekce s navbarem-->
-    <header class="container relative z-10">
+    <header class="container relative z-20">
       <nav
-        class="flex justify-between items-center h-16 bg-white text-black fixed shadow-sm font-monow w-full px-16"
+        class="flex justify-between items-center h-16 text-white bg-neutral-900 fixed shadow-sm font-monow w-full px-16"
         role="navigation"
       >
-        <a href="index.html" style="max-width: 256px">
+        <a href="index.html" style="max-width: 240px">
           <img src="./public/logo.png" alt="logo" />
         </a>
-        <div class="px-4 cursor-pointer md:hidden" id="burger">
+        <div class="px-4 cursor-pointer lg:hidden" id="burger">
           <svg
             class="w-6 h-6"
             fill="none"
@@ -42,13 +42,17 @@
             <path d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </div>
-        <div class="pr-8 md:block hidden" id="menu">
-          <a href="#" class="p-4">Domů</a>
-          <a href="#" class="p-4">O nás</a>
-          <a href="#" class="p-4">Jak postupujeme</a>
-          <a href="#" class="p-4">Náš tým</a>
-          <a href="#" class="p-4">Kontaktujte nás</a>
-          <a href="#" class="p-4">Kladené otázky</a>
+        <div class="pr-8 lg:block hidden" id="menu">
+          <a href="#hero" class="p-3 hover:text-slate-300">Domů</a>
+          <a href="#our-services" class="p-3 hover:text-slate-300">O nás</a>
+          <a href="#how-does-it-work" class="p-3 hover:text-slate-300"
+            >Postup</a
+          >
+          <a href="#our-team" class="p-3 hover:text-slate-300">Náš tým</a>
+          <a href="#contact" class="p-3 hover:text-slate-300"
+            >Kontaktujte nás</a
+          >
+          <a href="#faq" class="p-3 hover:text-slate-300">Kladené otázky</a>
         </div>
       </nav>
     </header>
@@ -57,18 +61,19 @@
       id="hero"
       class="w-screen h-screen text-red-50 flex justify-center align-middle"
     >
-      <canvas id="stars" class="w-screen"></canvas>
+      <canvas id="stars" class="w-screen" style="opacity: 0.8"></canvas>
       <div
         class="hero-content flex flex-col items-center justify-center h-screen z-10"
       >
-        <h1 class="text-6xl font-bold">
-          Vaše cesta k digitálnímu úspěchu začíná s námi
+        <h1 class="text-5xl font-bold text-center">
+          VAŠE CESTA K DIGITÁLNÍMU ÚSPĚCHU ZAČÍNÁ S NÁMI
         </h1>
         <p class="text-xl mt-6">Úpravy a vývoj webů podle vašich potřeb</p>
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+          class="bg-transparent border-2 border-white hover:bg-white text-white hover:text-black font-bold py-3 px-12 rounded-full mt-32"
+          onclick="smoothScroll('#our-services')"
         >
-          Learn More
+          Zjistit více
         </button>
       </div>
     </section>
@@ -103,7 +108,7 @@
       </div>
     </section>
     <!--Jak to funguje Sekce-->
-    <section id="how-does-it-works">
+    <section id="how-does-it-work">
       <div class="container mx-auto my-16">
         <h2 class="text-3xl font-bold text-center text-white">
           Jak to funguje
@@ -381,6 +386,24 @@
             item.classList.toggle("open");
           });
       });
+
+      // Skript pro posun na danou sekci po kliknutí na odkazy v navbaru
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Skript pro posun na danou sekci po kliknutí na tlačítko v hero sekci
+      function smoothScroll(target) {
+        document.querySelector(target).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     </script>
     <script src="stars.js"></script>
   </body>
