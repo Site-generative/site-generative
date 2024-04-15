@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Site-Generative</title>
+  </head>
+  <body class="bg-neutral-900 flex flex-col">
+    <!--Header Sekce s navbarem-->
+    <header class="container">
+      <nav
+        class="flex justify-between items-center h-16 bg-white text-black fixed shadow-sm font-monow w-full"
+        role="navigation"
+      >
+        <a href="#" class="pl-8">Logo</a>
+        <div class="px-4 cursor-pointer md:hidden" id="burger">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </div>
+        <div class="pr-8 md:block hidden" id="menu">
+          <a href="#" class="p-4">Home</a>
+          <a href="#" class="p-4">About</a>
+          <a href="#" class="p-4">Services</a>
+          <a href="#" class="p-4">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <!--Hero Sekce-->
+    <section
+      id="hero"
+      class="w-screen h-screen text-red-50 flex justify-center align-middle"
+    >
+      <div
+        class="hero-content flex flex-col items-center justify-center h-screen"
+      >
+        <h1 class="text-6xl font-bold">
+          Vaše cesta k digitálnímu úspěchu začíná s námi
+        </h1>
+        <p class="text-xl mt-6">Úpravy a vývoj webů podle vašich potřeb</p>
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+        >
+          Learn More
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
