@@ -9,16 +9,26 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="faq.css" />
+    <link rel="icon" href="./public/code-icon.png" type="image/x-icon" />
+    <!--Pro internet explorer-->
+    <link
+      rel="shortcut icon"
+      href="./public/code-icon.png"
+      type="image/x-icon"
+    />
     <title>Site-Generative</title>
+    <script src="particle.js"></script>
   </head>
   <body class="bg-neutral-900 flex flex-col">
     <!--Header Sekce s navbarem-->
-    <header class="container">
+    <header class="container relative z-10">
       <nav
-        class="flex justify-between items-center h-16 bg-white text-black fixed shadow-sm font-monow w-full"
+        class="flex justify-between items-center h-16 bg-white text-black fixed shadow-sm font-monow w-full px-16"
         role="navigation"
       >
-        <a href="#" class="pl-8">Logo</a>
+        <a href="index.html" style="max-width: 256px">
+          <img src="./public/logo.png" alt="logo" />
+        </a>
         <div class="px-4 cursor-pointer md:hidden" id="burger">
           <svg
             class="w-6 h-6"
@@ -33,10 +43,12 @@
           </svg>
         </div>
         <div class="pr-8 md:block hidden" id="menu">
-          <a href="#" class="p-4">Home</a>
-          <a href="#" class="p-4">About</a>
-          <a href="#" class="p-4">Services</a>
-          <a href="#" class="p-4">Contact</a>
+          <a href="#" class="p-4">Domů</a>
+          <a href="#" class="p-4">O nás</a>
+          <a href="#" class="p-4">Jak postupujeme</a>
+          <a href="#" class="p-4">Náš tým</a>
+          <a href="#" class="p-4">Kontaktujte nás</a>
+          <a href="#" class="p-4">Kladené otázky</a>
         </div>
       </nav>
     </header>
@@ -45,8 +57,9 @@
       id="hero"
       class="w-screen h-screen text-red-50 flex justify-center align-middle"
     >
+      <canvas id="stars" class="w-screen"></canvas>
       <div
-        class="hero-content flex flex-col items-center justify-center h-screen"
+        class="hero-content flex flex-col items-center justify-center h-screen z-10"
       >
         <h1 class="text-6xl font-bold">
           Vaše cesta k digitálnímu úspěchu začíná s námi
@@ -89,7 +102,6 @@
         </div>
       </div>
     </section>
-    <hr />
     <!--Jak to funguje Sekce-->
     <section id="how-does-it-works">
       <div class="container mx-auto my-16">
@@ -135,7 +147,6 @@
         </div>
       </div>
     </section>
-    <hr />
     <!--Náš tým Sekce-->
     <section id="our-team">
       <div
@@ -210,7 +221,6 @@
         </form>
       </div>
     </section>
-    <hr />
     <!--FAQ Sekce-->
     <section id="faq">
       <div class="accordion container mx-auto my-16">
@@ -372,5 +382,6 @@
           });
       });
     </script>
+    <script src="stars.js"></script>
   </body>
 </html>
