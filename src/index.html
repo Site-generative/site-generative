@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="faq.css" />
     <title>Site-Generative</title>
   </head>
   <body class="bg-neutral-900 flex flex-col">
@@ -58,5 +59,318 @@
         </button>
       </div>
     </section>
+    <hr />
+    <!--O nás Sekce-->
+    <section id="our-services">
+      <div class="container mx-auto my-16">
+        <h2 class="text-3xl font-bold text-center text-white">Naše služby</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Web Design</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Web Development</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">SEO</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!--Jak to funguje Sekce-->
+    <section id="how-does-it-works">
+      <div class="container mx-auto my-16">
+        <h2 class="text-3xl font-bold text-center text-white">
+          Jak to funguje
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-8">
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Kontakt</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Návrh</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Vývoj prvotní verze</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Konzultace s klientem</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+          <div class="service bg-white p-8 rounded shadow-md">
+            <h3 class="text-2xl font-bold">Vypuštění do světa</h3>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              eget felis eget nunc lacinia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!--Náš tým Sekce-->
+    <section id="our-team">
+      <div
+        class="container mx-auto my-16 justify-center flex flex-col items-center"
+      >
+        <h2 class="text-3xl font-bold text-center text-white">Náš tým</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-8 justify-center w-6/12"
+        >
+          <div class="team-member bg-white p-8 rounded shadow-md">
+            <img
+              src="https://randomuser.me/api/port"
+              alt="team-member"
+              class="rounded-full w-32 h-32 mx-auto"
+            />
+            <h3 class="text-2xl font-bold text-center mt-4">Dominik Vinš</h3>
+            <p class="text-center">Web Developer</p>
+          </div>
+          <div class="team-member bg-white p-8 rounded shadow-md">
+            <img
+              src="https://randomuser.me/api/port"
+              alt="team-member"
+              class="rounded-full w-32 h-32 mx-auto"
+            />
+            <h3 class="text-2xl font-bold text-center mt-4">Tomáš Toman</h3>
+            <p class="text-center">Web Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!--Kontakt Sekce-->
+    <section id="contact">
+      <div class="container mx-auto my-16">
+        <h2 class="text-3xl font-bold text-center text-white">Kontakt</h2>
+        <form class="mt-8">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-white">Jméno</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full p-2 rounded bg-white"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-white">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full p-2 rounded bg-white"
+              />
+            </div>
+          </div>
+          <div class="mt-4">
+            <label for="message" class="block text-white">Zpráva</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full p-2 rounded bg-white"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+          >
+            Odeslat
+          </button>
+        </form>
+      </div>
+    </section>
+    <hr />
+    <!--FAQ Sekce-->
+    <section id="faq">
+      <div class="accordion container mx-auto my-16">
+        <h2 class="text-3xl font-bold text-center text-white">
+          Nejčastěji kladené otázky
+        </h2>
+        <!--První otázka-->
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            <span class="accordion-item-header-title"
+              >Kolik mě to bude stát?</span
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down accordion-item-header-icon"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+          <div class="accordion-item-description-wrapper">
+            <div class="accordion-item-description">
+              <hr />
+              <p>
+                This is the description for Accordion Item 1. This is the
+                description for Accordion Item 1.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Druhá otázka-->
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            <span class="accordion-item-header-title"
+              >Jak dlouho trvá vytvoření webové stránky?</span
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down accordion-item-header-icon"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+          <div class="accordion-item-description-wrapper">
+            <div class="accordion-item-description">
+              <hr />
+              <p>
+                This is the description for Accordion Item 2. This is the
+                description for Accordion Item 2. This is the description for
+                Accordion Item 2. This is the description for Accordion Item 2.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Třetí otázka-->
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            <span class="accordion-item-header-title"
+              >Budou stránky fungovat na všech zařízeních?</span
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down accordion-item-header-icon"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+          <div class="accordion-item-description-wrapper">
+            <div class="accordion-item-description">
+              <hr />
+              <p>
+                This is the description for Accordion Item 3. This is the
+                description for Accordion Item 3. This is the description for
+                Accordion Item 3. This is the description for Accordion Item 3.
+                This is the description for Accordion Item 3. This is the
+                description for Accordion Item 3. This is the description for
+                Accordion Item 3.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-item-header">
+            <span class="accordion-item-header-title"
+              >Jakým způsobem budeme komunikovat během procesu vytváření
+              webových stránek?</span
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down accordion-item-header-icon"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+          <div class="accordion-item-description-wrapper">
+            <div class="accordion-item-description">
+              <hr />
+              <p>
+                This is the description for Accordion Item 3. This is the
+                description for Accordion Item 3. This is the description for
+                Accordion Item 3. This is the description for Accordion Item 3.
+                This is the description for Accordion Item 3. This is the
+                description for Accordion Item 3. This is the description for
+                Accordion Item 3.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer Sekce-->
+    <hr />
+    <footer>
+      <div class="container mx-auto p-4 mt-32">
+        <p class="text-center text-white">
+          © 2024 Site-Generative. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      //Skript pro otevírání a zavírání FAQ položek
+      document.querySelectorAll(".accordion-item").forEach((item) => {
+        item
+          .querySelector(".accordion-item-header")
+          .addEventListener("click", () => {
+            item.classList.toggle("open");
+          });
+      });
+    </script>
   </body>
 </html>
