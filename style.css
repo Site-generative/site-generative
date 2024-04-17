@@ -51,3 +51,6 @@ a {
 .hover\:bg-slate-300:hover {
   background-color: rgb(203 213 225);
 }
+.h-fit {
+  height: fit-content;
+}
