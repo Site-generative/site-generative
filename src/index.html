@@ -63,7 +63,7 @@
     >
       <canvas id="stars" class="w-screen" style="opacity: 0.8"></canvas>
       <div
-        class="hero-content flex flex-col items-center justify-center h-screen z-10"
+        class="hero-content flex flex-col items-center justify-center h-screen z-10 mt-10"
       >
         <h1 class="text-5xl font-bold text-center">
           VAŠE CESTA K DIGITÁLNÍMU ÚSPĚCHU ZAČÍNÁ S NÁMI
@@ -127,40 +127,42 @@
         <h2 class="text-3xl font-bold text-center text-white">
           Jak to funguje
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-8 sm:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-8 px-8 sm:px-8"
+        >
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <h3 class="text-2xl font-bold">Kontakt</h3>
             <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              eget felis eget nunc lacinia.
+              Vše začíná kontaktem, kdy navážeme spojení a zjistíme, co přesně
+              budete chtít podle vašich požadavků a potřeb.
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <h3 class="text-2xl font-bold">Návrh</h3>
             <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              eget felis eget nunc lacinia.
+              Podle vašich požadavků vytvoříme návrh, který bude odpovídat tomu,
+              co se vám líbí.
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <h3 class="text-2xl font-bold">Vývoj prvotní verze</h3>
             <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              eget felis eget nunc lacinia.
+              Po schválení návrhu se pustíme s naším týmem do vývoje vaší webové
+              stránky
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <h3 class="text-2xl font-bold">Konzultace s klientem</h3>
             <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              eget felis eget nunc lacinia.
+              Po dokončení první verze se s vámi sejdeme a projdeme si, co se
+              vám líbí a co byste popřípadě chtěli změnit.
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <h3 class="text-2xl font-bold">Vypuštění do světa</h3>
             <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              eget felis eget nunc lacinia.
+              Po dokončení všech úprav a schválení vás stránka vypustíme do
+              světa, kde se můžete těšit na nové návštěvníky.
             </p>
           </div>
         </div>
@@ -175,18 +177,18 @@
         <div
           class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-8 justify-center w-6/12"
         >
-          <div class="team-member bg-white p-8 rounded shadow-md">
+          <div class="team-member bg-gray-mo p-8 rounded shadow-md text-white">
             <img
-              src="https://randomuser.me/api/port"
+              src="./public/domi.png"
               alt="team-member"
               class="rounded-full w-32 h-32 mx-auto"
             />
             <h3 class="text-2xl font-bold text-center mt-4">Dominik Vinš</h3>
             <p class="text-center">Web Developer</p>
           </div>
-          <div class="team-member bg-white p-8 rounded shadow-md">
+          <div class="team-member bg-gray-mo p-8 rounded shadow-md text-white">
             <img
-              src="https://randomuser.me/api/port"
+              src="./public/tomi.png"
               alt="team-member"
               class="rounded-full w-32 h-32 mx-auto"
             />
@@ -198,44 +200,52 @@
     </section>
     <hr />
     <!--Kontakt Sekce-->
-    <section id="contact">
-      <div class="container mx-auto my-16">
-        <h2 class="text-3xl font-bold text-center text-white">Kontakt</h2>
-        <form class="mt-8">
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label for="name" class="block text-white">Jméno</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="w-full p-2 rounded bg-white"
-              />
-            </div>
-            <div>
-              <label for="email" class="block text-white">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="w-full p-2 rounded bg-white"
-              />
-            </div>
+    <section id="contact" class="bg-transparent">
+      <div
+        class="py-8 lg:py-8 px-4 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white mt-6"
+      >
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white"
+        >
+          Kontaktujte nás
+        </h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-white sm:text-xl">
+          Pokud máte zájem o naše služby, neváhejte nám napsat, co nejdříve se
+          vám ozveme a domluvíme si schůzku.
+        </p>
+        <form action="#" class="space-y-8">
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Váš email</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="frantapepik@priklad.cz"
+              required
+            />
           </div>
-          <div class="mt-4">
-            <label for="message" class="block text-white">Zpráva</label>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+              >Vaše zpráva</label
+            >
             <textarea
               id="message"
-              name="message"
-              rows="4"
-              class="w-full p-2 rounded bg-white"
+              rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Zde napište vaší zprávu..."
             ></textarea>
           </div>
           <button
             type="submit"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            class="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-white hover:bg-slate-300 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
-            Odeslat
+            Odeslat zprávu
           </button>
         </form>
       </div>

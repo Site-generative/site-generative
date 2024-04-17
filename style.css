@@ -48,3 +48,6 @@ a {
 .hover\:text-slate-300:hover {
   color: rgb(203 213 225);
 }
+.hover\:bg-slate-300:hover {
+  background-color: rgb(203 213 225);
+}
