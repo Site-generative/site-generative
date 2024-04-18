@@ -38,6 +38,7 @@
     <title>Site-Generative: Web Design, Vývoj a SEO Služby</title>
   </head>
   <body class="bg-neutral-900 flex flex-col">
+    <a id="top"></a>
     <!-- Header Sekce s navigačním barem -->
     <header class="container relative z-20">
       <nav
@@ -65,10 +66,10 @@
           </svg>
         </div>
         <div class="pr-8 lg:block hidden" id="menu">
-          <a href="#hero" class="p-3 hover:text-slate-300">Domů</a>
-          <a href="#our-services" class="p-3 hover:text-slate-300">O nás</a>
+          <a href="#top" class="p-3 hover:text-slate-300">Domů</a>
+          <a href="#our-services" class="p-3 hover:text-slate-300">Naše služby</a>
           <a href="#how-does-it-work" class="p-3 hover:text-slate-300"
-            >Postup</a
+            >Jak to funguje</a
           >
           <a href="#our-team" class="p-3 hover:text-slate-300">Náš tým</a>
           <a href="#contact" class="p-3 hover:text-slate-300"
@@ -84,24 +85,24 @@
       class="lg:hidden fixed top-16 right-0 bottom-0 left-0 bg-neutral-900 bg-opacity-90 z-30 hidden h-fit"
       id="mobileMenu"
     >
-      <div class="flex flex-col items-center justify-start h-fit py-8">
-        <a href="#hero" class="py-3 text-white" onclick="toggleMenu()">Domů</a>
-        <a href="#our-services" class="py-3 text-white" onclick="toggleMenu()">
-          nás</a
+      <div class="flex flex-col items-center justify-start h-fit">
+        <a href="#top" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()">Domů</a>
+        <a href="#our-services" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()">
+          Naše služby</a
         >
         <a
           href="#how-does-it-work"
-          class="py-3 text-white"
+          class="py-3 text-white border-b-2 border-purple-900 w-screen text-center"
           onclick="toggleMenu()"
-          >Postup</a
+          >Jak to funguje</a
         >
-        <a href="#our-team" class="py-3 text-white" onclick="toggleMenu()"
+        <a href="#our-team" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()"
           >Náš tým</a
         >
-        <a href="#contact" class="py-3 text-white" onclick="toggleMenu()"
+        <a href="#contact" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()"
           >Kontaktujte nás</a
         >
-        <a href="#faq" class="py-3 text-white" onclick="toggleMenu()"
+        <a href="#faq" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()"
           >FAQ</a
         >
       </div>
@@ -122,7 +123,7 @@
           VAŠE CESTA K DIGITÁLNÍMU ÚSPĚCHU ZAČÍNÁ S NÁMI
         </h1>
         <p class="text-sm md:text-xl mt-6 text-center">
-          Úpravy a vývoj webů podle vašich potřeb
+          Úpravy a vývoj webů dle vašich potřeb
         </p>
         <button
           class="bg-transparent border-2 border-purple-500 hover:border-white hover:bg-purple-900 text-white hover:text-white font-bold py-3 px-12 rounded-full mt-32 transition-all duration-300"
@@ -147,7 +148,7 @@
               odpovídají potřebám a vizím našich klientů. S naším týmem
               talentovaných designérů a vývojářů zajistíme, že váš web bude
               nejen esteticky atraktivní, ale také intuitivní a uživatelsky
-              přívětivý. Nechte nás vám pomoci přinést vaše online přítomnost na
+              přívětivý. Nechte nás vám pomoci přinést vaši online přítomnost na
               vyšší úroveň.
             </p>
           </div>
@@ -155,7 +156,7 @@
             <h3 class="text-2xl font-bold border-b-2 border-purple-900">Web Development</h3>
             <p class="mt-4 text-lg">
               Naše webové vývojářské služby jsou zaměřeny na vytváření
-              komplexních a robustních webových aplikací, které plně odpovídají
+              komplexních a robustních webových aplikacích, které plně odpovídají
               vašim potřebám. S použitím nejnovějších technologií a osvědčených
               postupů zajistíme, že váš web bude nejenom efektivní, ale také
               bezpečný a snadno udržovatelný.
@@ -216,8 +217,8 @@
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <h3 class="text-2xl font-bold border-b-2 border-purple-900">Vypuštění do světa</h3>
             <p class="mt-4">
-              Po dokončení všech úprav a schválení vás stránka vypustíme do
-              světa, kde se můžete těšit na nové návštěvníky.
+              Po dokončení všech úprav a vašeho schválení stránku vypustíme do
+              světa, kde se může těšit na mnoho nových návštěvníky.
             </p>
           </div>
         </div>
@@ -273,7 +274,7 @@
           Kontaktujte nás
         </h2>
         <p class="mb-8 lg:mb-8 font-light text-center text-white sm:text-xl">
-          Pokud máte zájem o naše služby, neváhejte nám napsat, co nejdříve se
+          Pokud máte zájem o naše služby, neváhejte nám napsat. Co nejdříve se
           vám ozveme a domluvíme si schůzku.
         </p>
         <form action="email_sender.php" method="post">
@@ -348,7 +349,7 @@
             <div class="accordion-item-description">
               <hr />
               <p>
-                Cena webu je indivuílní a záleží na mnoha faktorech, jako je
+                Cena webu je individuální a záleží na mnoha faktorech, jako je
                 jeho velikost, složitost a požadavky klienta. Pro přesný odhad
                 ceny nás kontaktujte a rádi vám poskytneme cenovou nabídku na
                 míru.
