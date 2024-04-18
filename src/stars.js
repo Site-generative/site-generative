@@ -7,7 +7,7 @@ var canvas = document.getElementById("stars");
 canvas.width = maxx;
 canvas.height = maxy;
 var context = canvas.getContext("2d");
-var dotCount = 200;
+var dotCount = 300;
 var dots = [];
 // create dots
 for (var i = 0; i < dotCount; i++) {
@@ -18,9 +18,9 @@ for (var i = 0; i < dotCount; i++) {
 function render() {
   // Set background gradient
   var gradient = context.createLinearGradient(0, 0, maxx, maxy);
-  gradient.addColorStop(0.112, "rgb(69, 86, 102)");
-  gradient.addColorStop(0.512, "rgb(34, 34, 34)");
-  gradient.addColorStop(0.986, "rgb(0, 0, 0)");
+  gradient.addColorStop(0.112, "rgb(0, 0, 0)");
+  gradient.addColorStop(0.512, "rgb(49, 16, 74)");
+  gradient.addColorStop(0.986, "rgb(88, 28, 135)");
 
   context.fillStyle = gradient;
   context.fillRect(0, 0, maxx, maxy);
@@ -49,8 +49,7 @@ dot.prototype.draw = function () {
   var dx = halfx + this.rad_x * Math.cos((this.alpha / 180) * Math.PI);
   var dy = halfy + this.rad_y * Math.sin((this.alpha / 180) * Math.PI);
   // set color
-  context.fillStyle =
-    "rgb(" + this.color + "," + this.color + "," + this.color + ")";
+  context.fillStyle = "rgb(255,255,255)";
   // draw dot
   context.fillRect(dx, dy, this.size, this.size);
 };

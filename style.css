@@ -7,12 +7,16 @@ body {
   overflow-x: hidden;
 }
 @font-face {
-  font-family: "coopper-hewitt-heavy";
-  src: url("src/public/fonts/CooperHewitt-Heavy.otf") format("opentype");
+  font-family: "roboto-bold";
+  src: url("src/public/fonts/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "coopper-hewitt-light";
-  src: url("src/public/fonts/CooperHewitt-Light.otf") format("opentype");
+  font-family: "roboto-regular";
+  src: url("src/public/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto-light";
+  src: url("src/public/fonts/Roboto-Light.ttf") format("truetype");
 }
 canvas {
   position: absolute;
@@ -22,16 +26,16 @@ canvas {
   padding: 0;
 }
 h1 {
-  font-family: "coopper-hewitt-heavy";
+  font-family: "roboto-bold";
 }
 h2 {
-  font-family: "coopper-hewitt-heavy";
+  font-family: "roboto-bold";
 }
 p {
-  font-family: "coopper-hewitt-light";
+  font-family: "roboto-light";
 }
 a {
-  font-family: "coopper-hewitt-light";
+  font-family: "roboto-regular";
 }
 .bg-neutral-900 {
   background-color: rgb(23 23 23);
@@ -41,6 +45,9 @@ a {
 }
 .bg-gray-mo {
   background-color: #181a1b;
+}
+.bg-gray-dark {
+  background-color: #131313;
 }
 .hover\:text-slate-500:hover {
   color: rgb(100 116 139);
@@ -53,4 +60,10 @@ a {
 }
 .h-fit {
   height: fit-content;
+}
+.pt-screen {
+  padding-top: 100vh;
+}
+.spacer {
+  height: 100vh;
 }

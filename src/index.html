@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta 
+      charset="UTF-8" 
+    />
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0" 
+    />
     <meta
       name="description"
       content="Site-Generative: Specializujeme se na tvorbu a úpravy webových stránek na míru. Nabízíme služby web designu, vývoje a SEO optimalizace."
@@ -11,9 +16,19 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="faq.css" />
-    <link rel="icon" href="./public/code-icon.png" type="image/x-icon" />
+    <link 
+      rel="stylesheet" 
+      href="../style.css" 
+    />
+    <link 
+      rel="stylesheet" 
+      href="faq.css" 
+    />
+    <link 
+      rel="icon" 
+      href="./public/code-icon.png" 
+      type="image/x-icon" 
+    />
     <!--Pro internet explorer-->
     <link
       rel="shortcut icon"
@@ -26,7 +41,7 @@
     <!-- Header Sekce s navigačním barem -->
     <header class="container relative z-20">
       <nav
-        class="flex justify-between items-center h-16 text-white bg-neutral-900 fixed shadow-sm font-monow w-full px-16"
+        class="flex justify-between items-center h-16 text-white bg-gray-dark fixed shadow-sm font-monow w-full px-16 border-b-2 border-purple-900"
         role="navigation"
       >
         <a href="index.html" style="max-width: 240px">
@@ -59,7 +74,7 @@
           <a href="#contact" class="p-3 hover:text-slate-300"
             >Kontaktujte nás</a
           >
-          <a href="#faq" class="p-3 hover:text-slate-300">Kladené otázky</a>
+          <a href="#faq" class="p-3 hover:text-slate-300">FAQ</a>
         </div>
       </nav>
     </header>
@@ -87,7 +102,7 @@
           >Kontaktujte nás</a
         >
         <a href="#faq" class="py-3 text-white" onclick="toggleMenu()"
-          >Kladené otázky</a
+          >FAQ</a
         >
       </div>
     </div>
@@ -95,7 +110,7 @@
     <!--Hero Sekce-->
     <section
       id="hero"
-      class="w-screen h-screen text-red-50 flex justify-center align-middle"
+      class="w-screen h-screen text-red-50 flex justify-center align-middle fixed z-1"
     >
       <canvas id="stars" class="w-screen" style="opacity: 0.8"></canvas>
       <div
@@ -110,23 +125,23 @@
           Úpravy a vývoj webů podle vašich potřeb
         </p>
         <button
-          class="bg-transparent border-2 border-white hover:bg-white text-white hover:text-black font-bold py-3 px-12 rounded-full mt-32"
+          class="bg-transparent border-2 border-purple-500 hover:border-white hover:bg-purple-900 text-white hover:text-white font-bold py-3 px-12 rounded-full mt-32 transition-all duration-300"
           onclick="smoothScroll('#our-services')"
         >
           Zjistit více
         </button>
       </div>
     </section>
-    <hr />
     <!-- O nás Sekce -->
-    <section id="our-services">
+    <div class="spacer"></div>
+    <section id="our-services" class="relative z-10 bg-neutral-900">
       <div class="container mx-auto my-16">
         <h2 class="text-3xl font-bold text-center text-white">Naše služby</h2>
         <div
-          class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 sm:px-8 gap-4 mt-8"
+          class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 sm:px-8 px-8 gap-4 mt-8 md:justify-center"
         >
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Web Design</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Web Design</h3>
             <p class="mt-4 text-lg">
               Vytváříme moderní a funkční webové stránky, které přesně
               odpovídají potřebám a vizím našich klientů. S naším týmem
@@ -137,7 +152,7 @@
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Web Development</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Web Development</h3>
             <p class="mt-4 text-lg">
               Naše webové vývojářské služby jsou zaměřeny na vytváření
               komplexních a robustních webových aplikací, které plně odpovídají
@@ -147,7 +162,7 @@
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">SEO</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">SEO</h3>
             <p class="mt-4 text-lg">
               V rámci našich SEO služeb se zaměřujeme na optimalizaci vašeho
               webu tak, aby byl lépe viditelný pro vyhledávače, což vede k
@@ -162,7 +177,7 @@
     </section>
 
     <!--Jak to funguje Sekce-->
-    <section id="how-does-it-work">
+    <section id="how-does-it-work" class="relative z-10 bg-neutral-900">
       <div class="container mx-auto my-16">
         <h2 class="text-3xl font-bold text-center text-white">
           Jak to funguje
@@ -171,35 +186,35 @@
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-8 px-8 sm:px-8 md:justify-center"
         >
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Kontakt</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Kontakt</h3>
             <p class="mt-4">
               Vše začíná kontaktem, kdy navážeme spojení a zjistíme, co přesně
               budete chtít podle vašich požadavků a potřeb.
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Návrh</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Návrh</h3>
             <p class="mt-4">
               Podle vašich požadavků vytvoříme návrh, který bude odpovídat tomu,
               co se vám líbí.
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Vývoj prvotní verze</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Vývoj prvotní verze</h3>
             <p class="mt-4">
               Po schválení návrhu se pustíme s naším týmem do vývoje vaší webové
               stránky
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Konzultace s klientem</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Konzultace s klientem</h3>
             <p class="mt-4">
               Po dokončení první verze se s vámi sejdeme a projdeme si, co se
               vám líbí a co byste popřípadě chtěli změnit.
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <h3 class="text-2xl font-bold">Vypuštění do světa</h3>
+            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Vypuštění do světa</h3>
             <p class="mt-4">
               Po dokončení všech úprav a schválení vás stránka vypustíme do
               světa, kde se můžete těšit na nové návštěvníky.
@@ -209,7 +224,7 @@
       </div>
     </section>
     <!--Náš tým Sekce-->
-    <section id="our-team">
+    <section id="our-team" class="relative z-10 bg-neutral-900">
       <div
         class="container mx-auto my-16 justify-center flex flex-col items-center"
       >
@@ -223,8 +238,12 @@
               alt="team-member"
               class="rounded-full w-32 h-32 mx-auto"
             />
-            <h3 class="text-2xl font-bold text-center mt-4">Dominik Vinš</h3>
-            <p class="text-center">Web Developer</p>
+            <h3 class="text-3xl font-bold text-center mt-4">Dominik Vinš</h3>
+            <p class="text-center mb-4">Web Developer</p>
+            <hr class="border-b-1 border-purple-900"/>
+            <h3 class="text-2xl font-bold text-center mt-4 mb-4">Kontakt</h4>
+            <p class="flex mb-3 text-lg justify-center"><svg class="mr-2" style="height: 30px; width: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>+420 777 439 499</p>
+            <p class="flex text-lg justify-center"><svg class="mr-2" style="height: 33px; width: 33px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>dominik_vins</p>
           </div>
           <div class="team-member bg-gray-mo p-8 rounded shadow-md text-white">
             <img
@@ -232,24 +251,28 @@
               alt="team-member"
               class="rounded-full w-32 h-32 mx-auto"
             />
-            <h3 class="text-2xl font-bold text-center mt-4">Tomáš Toman</h3>
-            <p class="text-center">Web Designer</p>
+            <h3 class="text-3xl font-bold text-center mt-4">Tomáš Toman</h3>
+            <p class="text-center mb-4">Web Designer</p>
+            <hr class="border-b-1 border-purple-900"/>
+            <h3 class="text-2xl font-bold text-center mt-4 mb-4">Kontakt</h4>
+            <p class="flex mb-3 text-lg justify-center"><svg class="mr-2" style="height: 30px; width: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>+420 725 597 675</p>
+            <p class="flex text-lg justify-center"><svg class="mr-2" style="height: 33px; width: 33px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>_tomastoman</p>
           </div>
         </div>
       </div>
     </section>
-    <hr />
+    <hr class="border-b-1 border-purple-900 z-10"/>
     <!--Kontakt Sekce-->
-    <section id="contact" class="bg-transparent">
+    <section id="contact" class="relative z-10 bg-neutral-900">
       <div
-        class="py-8 lg:py-8 px-4 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white mt-6"
+      class="py-8 lg:py-8 sm:px-12 px-8 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white mt-16 md:px-8"
       >
         <h2
           class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white"
         >
           Kontaktujte nás
         </h2>
-        <p class="mb-8 lg:mb-16 font-light text-center text-white sm:text-xl">
+        <p class="mb-8 lg:mb-8 font-light text-center text-white sm:text-xl">
           Pokud máte zájem o naše služby, neváhejte nám napsat, co nejdříve se
           vám ozveme a domluvíme si schůzku.
         </p>
@@ -257,46 +280,48 @@
           <div>
             <label
               for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >Váš email</label
+              class="block ml-0 m-2 text-sm font-medium text-white dark:text-white"
+              >Váš e-mail</label
             >
             <input
               type="email"
               id="email"
               name="email"
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="frantapepik@priklad.cz"
+              placeholder="e-mail@gmail.com"
               required
             />
           </div>
           <div class="sm:col-span-2">
             <label
               for="message"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+              class="block ml-0 m-2 text-sm font-medium text-white dark:text-white"
               >Vaše zpráva</label
             >
             <textarea
               id="message"
               name="message"
               rows="6"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              class="block mb-6 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Zde napište vaší zprávu..."
             ></textarea>
           </div>
-          <button
-            type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-gray-900 rounded-lg bg-white hover:bg-slate-300 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-          >
-            Odeslat zprávu
-          </button>
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-full bg-purple-900 sm:w-fit hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 transition-all duration-300"
+            >
+              Odeslat zprávu
+            </button>
+          </div>
         </form>
       </div>
     </section>
     <!--FAQ Sekce-->
-    <section id="faq">
-      <div class="accordion container mx-auto my-16">
+    <section id="faq" class="relative z-10 bg-neutral-900">
+      <div class="accordion container mx-auto my-16 sm:px-8 px-8">
         <h2 class="text-3xl font-bold text-center text-white">
-          Nejčastěji kladené otázky
+          FAQ
         </h2>
         <!--První otázka-->
         <div class="accordion-item">
@@ -431,7 +456,7 @@
       </div>
     </section>
     <footer>
-      <div class="container mx-auto p-4 mt-8">
+      <div class="bg-gray-dark mx-auto w-full p-5 relative z-10">
         <p class="text-center text-white">
           © 2024 Site-Generative. All rights reserved.
         </p>
@@ -439,7 +464,7 @@
     </footer>
 
     <script>
-      //Skript pro otevírání a zavírání FAQ položek
+      // Skript pro otevírání a zavírání FAQ položek
       document.querySelectorAll(".accordion-item").forEach((item) => {
         item
           .querySelector(".accordion-item-header")
