@@ -6,7 +6,6 @@
 body {
   overflow-x: hidden;
 }
-//Pokud označíš něco myší, tak se to zbarvý do fialové
 h1::selection,
 h2::selection,
 h3::selection,
