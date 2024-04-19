@@ -6,6 +6,22 @@
 body {
   overflow-x: hidden;
 }
+//Pokud označíš něco myší, tak se to zbarvý do fialové
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+a::selection,
+img::selection,
+button::selection,
+label::selection,
+input::selection,
+textarea::selection {
+  color: #fff;
+  background: rgb(88, 28, 135);
+}
+
 @font-face {
   font-family: "roboto-bold";
   src: url("src/public/fonts/Roboto-Bold.ttf") format("truetype");
