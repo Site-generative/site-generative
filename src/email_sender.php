@@ -1,5 +1,5 @@
 <?php
-    $to = 'example@example.com';
+    $to = 'info@siet-generative.com';
     // Sanitize and validate input
     $contact = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
