@@ -1,4 +1,6 @@
 <?php
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
     $to = 'info@siet-generative.com';
     // Sanitize and validate input
     $contact = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -22,6 +24,6 @@
     } else {
         echo 'Invalid input.';
     }
-    //echo '<br><a href="index.html">Back to contact form</a>';
-    header('Location: ../index.html');
+    echo '<br><a href="index.html">Back to contact form</a>';
+    //header('Location: ../index.html');
 ?>
