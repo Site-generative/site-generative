@@ -1,7 +1,7 @@
 <?php
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $to = 'info@siet-generative.com';
+    $to = 'info@site-generative.com';
     // Sanitize and validate input
     $contact = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
