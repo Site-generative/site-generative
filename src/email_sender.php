@@ -24,6 +24,6 @@
     } else {
         echo 'Invalid input.';
     }
-    echo '<br><a href="index.html">Back to contact form</a>';
-    //header('Location: ../index.html');
+    //echo '<br><a href="index.html">Back to contact form</a>';
+    header('Location: ../index.html');
 ?>
