@@ -13,6 +13,7 @@
 
     <!--Tailwind a CSS linky-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="./src/faq.css"/>
   </head>
@@ -227,7 +228,7 @@
           Pokud máte zájem o naše služby, neváhejte nám napsat. Co nejdříve se
           vám ozveme a domluvíme si schůzku.
         </p>
-        <form action="./src/email_sender.php" method="post">
+        <form hx-post="./src/email_sender.php" method="post">
           <div>
             <label for="email" class="block ml-0 m-2 text-sm font-medium text-white dark:text-white">
               Váš e-mail
