@@ -85,14 +85,21 @@
       class="w-screen h-screen text-red-50 flex justify-center align-middle fixed z-1"
     >
       <canvas id="stars" class="w-screen" style="opacity: 0.8"></canvas>
-      <div class="hero-content flex flex-col items-center justify-center h-screen mt-10 px-8">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">
+      <div
+        class="hero-content flex flex-col items-center justify-center h-screen z-10 mt-10 px-8"
+      >
+        <h1
+          class="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center"
+        >
           VAŠE CESTA K DIGITÁLNÍMU ÚSPĚCHU ZAČÍNÁ S NÁMI
         </h1>
-        <p class="text-lg md:text-xl mt-6 text-center">
+        <p class="text-sm md:text-xl mt-6 text-center">
           Úpravy a vývoj webů dle vašich potřeb
         </p>
-        <button class="btn-cta mt-32" onclick="smoothScroll('#our-services')">
+        <button
+          class="bg-transparent border-2 border-purple-500 hover:border-white hover:bg-purple-900 text-white hover:text-white font-bold py-3 px-12 rounded-full mt-32 transition-all duration-300"
+          onclick="smoothScroll('#our-services')"
+        >
           Zjistit více
         </button>
       </div>
