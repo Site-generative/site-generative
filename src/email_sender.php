@@ -1,33 +1,29 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $to = 'info@site-generative.com';
+    // Sanitize and validate input
+    $contact = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
-$to = 'info@site-generative.com';
-// Sanitize and validate input
-$contact = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    if ($contact && $message) {
+        // Set up the email parameters
+        $subject = 'New message from contact form';
+        $headers = 'From: ' . $contact . "\r\n" .
+                   'Reply-To: ' . $contact . "\r\n" .
+                   'X-Mailer: PHP/' . phpversion();
 
-if ($contact && $message) {
-    // Set up the email parameters
-    $subject = 'New message from contact form';
-    $headers = 'From: ' . $contact . "\r\n" .
-               'Reply-To: ' . $contact . "\r\n" .
-               'X-Mailer: PHP/' . phpversion();
-
-    // Send the email
-    if (mail($to, $subject, $message, $headers)) {
-        // Email sent successfully
-        $response = array('status' => 'success', 'message' => 'Email sent successfully.');
+        echo 'Email: ' . $contact . '<br>' .
+             'Message: ' . $message;
+        // Send the email
+        if (mail($to, $subject, $message, $headers)) {
+            echo 'Email sent successfully.';
+        } else {
+            echo 'Failed to send email.';
+        }
     } else {
-        // Failed to send email
-        $response = array('status' => 'error', 'message' => 'Failed to send email.');
+        echo 'Invalid input.';
     }
-} else {
-    // Invalid input
-    $response = array('status' => 'error', 'message' => 'Invalid input.');
-}
-
-// Return the response as JSON
-header('Content-Type: application/json');
-echo json_encode($response);
+    //echo '<br><a href="index.html">Back to contact form</a>';
+    header('Location: ../index.html');
 ?>
