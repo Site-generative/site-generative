@@ -73,6 +73,25 @@ textarea {
 .spacer {
   height: 100vh;
 }
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.wave .shape-fill {
+  fill: #171717;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
