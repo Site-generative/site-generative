@@ -55,6 +55,9 @@ textarea {
 .bg-gray-dark {
   background-color: #131313;
 }
+.bg-glass {
+  background: rgba(255, 255, 255, 0.1);
+}
 .hover\:text-slate-500:hover {
   color: rgb(100 116 139);
 }
