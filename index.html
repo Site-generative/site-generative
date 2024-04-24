@@ -280,6 +280,7 @@
             </button>
           </div>
         </form>
+        <div id="message-container">prdel vole</div>
       </div>
     </section>
 
@@ -461,6 +462,35 @@
         var mobileMenu = document.getElementById("mobileMenu");
         mobileMenu.classList.toggle("hidden");
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Create FormData object to send form data
+        var formData = new FormData(this);
+
+        // Send form data to PHP script using AJAX
+        fetch('./src/email_sender.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json()) // Parse JSON response
+        .then(data => {
+            // Display the response message
+            var messageContainer = document.getElementById('message-container');
+            messageContainer.textContent = data.message;
+            if (data.status === 'success') {
+                messageContainer.classList.add('text-green-500'); // Add success color
+            } else {
+                messageContainer.classList.add('text-red-500'); // Add error color
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+      });
+});
     </script>
     <!--Link na background s hvězdami-->
     <script src="src/stars.js"></script>
