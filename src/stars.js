@@ -16,17 +16,20 @@ for (var i = 0; i < dotCount; i++) {
 
 // dots animation
 function render() {
-  // Set background gradient
-  var gradient = context.createLinearGradient(0, 0, maxx, maxy);
-  gradient.addColorStop(0.112, "rgb(0, 0, 0)");
-  gradient.addColorStop(0.512, "rgb(49, 16, 74)");
-  gradient.addColorStop(0.986, "rgb(88, 28, 135)");
+  // Check if device is not a mobile device
+  if (!window.matchMedia("only screen and (max-width: 760px)").matches) {
+    // Set background gradient
+    var gradient = context.createLinearGradient(0, 0, maxx, maxy);
+    gradient.addColorStop(0.112, "rgb(0, 0, 0)");
+    gradient.addColorStop(0.512, "rgb(49, 16, 74)");
+    gradient.addColorStop(0.986, "rgb(88, 28, 135)");
 
-  context.fillStyle = gradient;
-  context.fillRect(0, 0, maxx, maxy);
-  for (var i = 0; i < dotCount; i++) {
-    dots[i].draw();
-    dots[i].move();
+    context.fillStyle = gradient;
+    context.fillRect(0, 0, maxx, maxy);
+    for (var i = 0; i < dotCount; i++) {
+      dots[i].draw();
+      dots[i].move();
+    }
   }
   requestAnimationFrame(render);
 }
