@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www.site-generative.com$ [NC]
-RewriteRule ^(.*)$ http://www.site-generative.com/$1 [L,R=301]
