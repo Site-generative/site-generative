@@ -59,7 +59,7 @@
 
         <div class="pr-8 lg:block hidden" id="menu">
           <a href="#top" class="p-3 hover:text-slate-300">Domů</a>
-          <a href="#our-services" class="p-3 hover:text-slate-300">Naše služby</a>
+          <a href="#about-us" class="p-3 hover:text-slate-300">O nás</a>
           <a href="#how-does-it-work" class="p-3 hover:text-slate-300">Jak to funguje</a>
           <a href="#our-team" class="p-3 hover:text-slate-300">Náš tým</a>
           <a href="#contact" class="p-3 hover:text-slate-300">Kontaktujte nás</a>
@@ -72,8 +72,8 @@
     <div class="lg:hidden fixed top-16 right-0 bottom-0 left-0 bg-neutral-900 bg-opacity-90 z-30 hidden h-fit" id="mobileMenu">
       <div class="flex flex-col items-center justify-start">
         <a href="#top" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()">Domů</a>
-        <a href="#our-services" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()">
-          Naše služby
+        <a href="#about-us" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()">
+          O nás
         </a>
         <a href="#how-does-it-work" class="py-3 text-white border-b-2 border-purple-900 w-screen text-center" onclick="toggleMenu()">
           Jak to funguje
@@ -108,6 +108,18 @@
 
     <!-- O nás Sekce -->
     <div class="spacer"></div>
+    <section id="about-us" class="relative z-10 bg-neutral-900">
+      <div class="py-8 lg:py-8 sm:px-12 px-8 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white mt-16 md:px-8 text-center">
+        <h2 class="text-3xl font-bold text-center text-white border-purple-900">O nás</h2>
+        <p class="mt-4 text-lg">
+          Vyvíjíme webové stránky na míru pro naše zákazníky. Naše služby zahrnují tvorbu moderních a funkčních webových stránek, 
+          které odpovídají přesně potřebám a vizím našich klientů. 
+          S naším týmem talentovaných designérů a vývojářů zajistíme, 
+          že váš web bude nejen esteticky atraktivní, ale také intuitivní a uživatelsky přívětivý. 
+          Nechte nás Vám pomoci přinést vaši online přítomnost na vyšší úroveň.
+        </p>
+      </div>
+    </section>
     <div class="wave relative z-10 visible hidden sm:block">
       <img src="./src/public/waves.svg" class="w-full" alt="Waves">
     </div>
@@ -157,17 +169,9 @@
         <h2 class="text-3xl font-bold text-center text-white">
           Jak to funguje
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-8 px-8 sm:px-8 md:justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8 px-8 sm:px-8 md:justify-center">
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
             <p class="font-semibold text-purple-700">1.</p>
-            <h3 class="text-2xl font-bold border-b-2 border-purple-900">Kontakt</h3>
-            <p class="mt-4">
-              Vše začíná kontaktem, kdy navážeme spojení a zjistíme, co přesně
-              budete chtít podle vašich požadavků a potřeb.
-            </p>
-          </div>
-          <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <p class="font-semibold text-purple-700">2.</p>
             <h3 class="text-2xl font-bold border-b-2 border-purple-900">Návrh</h3>
             <p class="mt-4">
               Podle vašich požadavků vytvoříme návrh, který bude odpovídat tomu,
@@ -175,7 +179,7 @@
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <p class="font-semibold text-purple-700">3.</p>
+            <p class="font-semibold text-purple-700">2.</p>
             <h3 class="text-2xl font-bold border-b-2 border-purple-900">Vývoj prvotní verze</h3>
             <p class="mt-4">
               Po schválení návrhu se pustíme s naším týmem do vývoje Vaší webové
@@ -183,7 +187,7 @@
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <p class="font-semibold text-purple-700">4.</p>
+            <p class="font-semibold text-purple-700">3.</p>
             <h3 class="text-2xl font-bold border-b-2 border-purple-900">Konzultace s klientem</h3>
             <p class="mt-4">
               Po dokončení první verze se s Vámi sejdeme a projdeme si, co se
@@ -191,7 +195,7 @@
             </p>
           </div>
           <div class="service bg-gray-mo text-white p-8 rounded shadow-md">
-            <p class="font-semibold text-purple-700">5.</p>
+            <p class="font-semibold text-purple-700">4.</p>
             <h3 class="text-2xl font-bold border-b-2 border-purple-900">Vypuštění do světa</h3>
             <p class="mt-4">
               Po dokončení všech úprav a vašeho schválení stránku vypustíme do
