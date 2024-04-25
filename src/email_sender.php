@@ -10,12 +10,13 @@
     $contact = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $message = $_POST['message'];
 
+    echo "das";
     if (empty($contact) || !filter_var($contact, FILTER_VALIDATE_EMAIL)) {
         $valErr = "Prosím zadejte platný e-mail.";
     } else {
         $postData = $_POST;
     }
-
+        echo "sad";
         if (isset($_POST['g-recaptcha-response'])) {
             $api_url = "https://www.google.com/recaptcha/api/siteverify";
             $resq_data = array('secret' => $secretKey, 'response' => $_POST['g-recaptcha-response'], 'remoteip' => $_SERVER['REMOTE_ADDR']);
