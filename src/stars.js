@@ -1,6 +1,6 @@
 // init
 var maxx = document.body.clientWidth;
-var maxy = document.body.clientHeight;
+var maxy = document.querySelector("#stars").clientHeight;
 var halfx = maxx / 2;
 var halfy = maxy / 2;
 var canvas = document.getElementById("stars");
