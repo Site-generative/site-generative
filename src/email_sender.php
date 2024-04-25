@@ -17,6 +17,7 @@
     }
 
     if (empty($valErr) && !empty($postData)) {
+      echo "dasdasd";
         if (isset($_POST['g-recaptcha-response'])) {
             $api_url = "https://www.google.com/recaptcha/api/siteverify";
             $resq_data = array('secret' => $secretKey, 'response' => $_POST['g-recaptcha-response'], 'remoteip' => $_SERVER['REMOTE_ADDR']);
