@@ -2,7 +2,7 @@
     ini_set('display_errors', 'Off');
     error_reporting(0);
 
-    $secretKey = "6LeCTscpAAAAADonfgLL_d0a-gB5YCi2IsCStkQg";
+    $secretKey = "6LfdVMcpAAAAAGN59Rwh9VQvXBTQ2vYtiTQ4a7dD";
     $postData = $valErr = $statusMsg = "";
     $status = "error";
 
