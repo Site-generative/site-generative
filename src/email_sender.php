@@ -51,6 +51,7 @@
                     'X-Mailer: PHP/' . phpversion();
                 
                 $headers .= "Content-Type:text/plain;charset=UTF-8\r\n";
+                $headers .= 'Content-Transfer-Encoding: base64' . "\r\n";
                 $message = mb_convert_encoding($message, "UTF-8", "auto");
 
                 if (mail($to, $subject, $message, $headers)) {
