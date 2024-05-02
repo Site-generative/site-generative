@@ -13,7 +13,7 @@
     <!--Facebook meta-->
     <meta property="og:title" content="Site-Generative">
     <meta property="og:description" content="Specializujeme se na tvorbu a úpravy webových stránek na míru. Nabízíme služby web designu, vývoje a SEO optimalizace.">
-    <meta property="og:image" content="https://www.site-generative.com/src/public/Site-Generative white com.png">
+    <meta property="og:image" content="https://www.site-generative.com/src/public/Browser logo.png">
     <meta property="og:url" content="https://www.site-generative.com/">
 
     <!--Twitter meta-->
@@ -26,7 +26,7 @@
 
     <!--Tailwind, CSS, AJAX linky-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" async defer></script>
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="./src/faq.css"/>
 
@@ -34,13 +34,13 @@
     <link rel="canonical" href="https://www.site-generative.com/"/>
     
     <!--Pro klasické prohlížeče-->
-    <link rel="icon" href="./src/public/Site-Generative white.png" type="image/x-icon"/>
+    <link rel="icon" href="./src/public/Browser logo.png" type="image/x-icon"/>
     
     <!--Pro internet explorer-->
-    <link rel="shortcut icon" href="./src/public/Site-Generative white.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./src/public/Browser logo.png" type="image/x-icon"/>
     
     <!--Pro Apple-->
-    <link rel="apple-touch-icon" href="./src/public/Site-Generative white.png" />
+    <link rel="apple-touch-icon" href="./src/public/Browser logo.png" />
 
     <script src="https://www.google.com/recaptcha/api.js?trustedtypes=true" async defer></script>
   </head>
@@ -108,15 +108,15 @@
         </div>
     </section>
     
-    <!--<div class="wave relative z-10 visible hidden md:block">
+    <div class="wave">
       <img src="./src/public/waves.svg" class="w-full" alt="Waves">
-    </div>-->
+    </div>
 
     <div class="spacer"></div>
     <!-- O nás Sekce -->
     <section id="about-us" class="z-10 bg-neutral-900">
       <div class="py-8 lg:py-8 sm:px-12 px-8 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white mt-16 md:px-8 text-center">
-        <h2 class="text-3xl font-bold text-center text-white border-purple-900">O nás</h2>
+        <h2 class="text-3xl font-bold text-center text-white border-b-2 border-purple-900">O nás</h2>
         <p class="mt-4 text-lg">
           Vyvíjíme webové stránky na míru pro naše zákazníky. Naše služby zahrnují tvorbu moderních a funkčních webových stránek, 
           které odpovídají přesně potřebám a vizím našich klientů. 
@@ -467,6 +467,8 @@
     </footer>
 
     <script>
+      document.getElementById("email").autocomplete = "on";
+
       // Skript pro odesílání formuláře pomocí AJAXu
       $(document).ready(function() {
         $('#contact-form').on('submit', function(e) {
@@ -519,8 +521,20 @@
       function onSubmit(token) {
         document.getElementById("contact-form").submit();
       }
+
+      window.addEventListener('scroll', function() {
+        var heroSection = document.getElementById('hero');
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        var windowHeight = document.body.scrollHeight;
+        
+        if (scrollPosition > windowHeight / 2) {
+          heroSection.classList.add('disabled');
+        } else {
+          heroSection.classList.remove('disabled');
+        }
+      });
     </script>
     <!--Link na background s hvězdami-->
-    <script src="src/stars.js"></script>
+    <script src="src/stars.js" async defer></script>
   </body>
 </html>

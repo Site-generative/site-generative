@@ -38,8 +38,8 @@ function dot() {
   this.rad_y = 1.2 * Math.random() * halfy + 1;
   this.alpha = Math.random() * 360 + 1;
   this.speed = Math.random() * 100 < 50 ? 1 : -1;
-  this.speed *= 0.1;
-  this.size = Math.random() * 5 + 1;
+  this.speed *= 0.05;
+  this.size = Math.random() * 2 + 1;
   this.color = Math.floor(Math.random() * 256);
 }
 
@@ -50,8 +50,12 @@ dot.prototype.draw = function () {
   var dy = halfy + this.rad_y * Math.sin((this.alpha / 180) * Math.PI);
   // set color
   context.fillStyle = "rgb(255,255,255)";
-  // draw dot
-  context.fillRect(dx, dy, this.size, this.size);
+  // begin path for circle
+  context.beginPath();
+  // draw circle
+  context.arc(dx, dy, this.size, 0, 2 * Math.PI);
+  // fill the circle
+  context.fill();
 };
 
 // calc new position in polar coord
