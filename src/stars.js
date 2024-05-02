@@ -5,8 +5,8 @@ var maxy = document.querySelector("#stars").clientHeight;
 var halfx = maxx / 2;
 var halfy = maxy / 2;
 var canvas = document.getElementById("stars");
-canvas.width = maxx * devicePixelRatio;
-canvas.height = maxy * devicePixelRatio;
+canvas.width = maxx;
+canvas.height = maxy;
 var context = canvas.getContext("2d");
 var dotCount = 300;
 var dots = [];
@@ -46,11 +46,16 @@ function dot() {
 
 // drawing dot
 dot.prototype.draw = function () {
+  // calc polar coord to decart
   var dx = halfx + this.rad_x * Math.cos((this.alpha / 180) * Math.PI);
   var dy = halfy + this.rad_y * Math.sin((this.alpha / 180) * Math.PI);
+  // set color
   context.fillStyle = "rgb(255,255,255)";
+  // begin path for circle
   context.beginPath();
+  // draw circle
   context.arc(dx, dy, this.size, 0, 2 * Math.PI);
+  // fill the circle
   context.fill();
 };
 

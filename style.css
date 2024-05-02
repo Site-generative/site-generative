@@ -80,18 +80,18 @@ img {
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  margin: 0;
+  padding: 0;
 }
 .wave svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  height: 100%;
+  object-fit: cover;
 }
 .wave .shape-fill {
   fill: #171717;
-}
-#hero.disabled {
-  visibility: hidden;
 }
 /* width */
 ::-webkit-scrollbar {
