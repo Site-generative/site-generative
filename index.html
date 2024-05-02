@@ -107,15 +107,16 @@
           </button>
         </div>
     </section>
-    
+
+    <div class="spacer"></div>
+
     <div class="wave">
       <img src="./src/public/waves.svg" class="w-full" alt="Waves">
     </div>
 
-    <div class="spacer"></div>
     <!-- O nás Sekce -->
     <section id="about-us" class="z-10 bg-neutral-900">
-      <div class="py-8 lg:py-8 sm:px-12 px-8 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white mt-16 md:px-8 text-center">
+      <div class="py-8 lg:py-8 sm:px-12 px-8 mx-auto max-w-screen-md bg-gray-mo rounded-lg shadow-md text-white md:px-8 text-center">
         <h2 class="text-3xl font-bold text-center text-white border-b-2 border-purple-900">O nás</h2>
         <p class="mt-4 text-lg">
           Vyvíjíme webové stránky na míru pro naše zákazníky. Naše služby zahrnují tvorbu moderních a funkčních webových stránek, 
@@ -292,7 +293,6 @@
               Odeslat zprávu
             </button>
           </div>
-
         </form>
       </div>
     </section>
@@ -465,75 +465,7 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.getElementById("email").autocomplete = "on";
-
-      // Skript pro odesílání formuláře pomocí AJAXu
-      $(document).ready(function() {
-        $('#contact-form').on('submit', function(e) {
-          e.preventDefault();
-          $.ajax({
-            url: $(this).attr('action'),
-            type: 'POST',
-            data: $(this).serialize(),
-            success: function(response) {
-              console.log('AJAX call successful');
-              $('#result').html(response);
-            }
-          });
-        });
-      });
-
-      // Skript pro otevírání a zavírání FAQ položek
-      document.querySelectorAll(".accordion-item").forEach((item) => {
-        item
-          .querySelector(".accordion-item-header")
-          .addEventListener("click", () => {
-            item.classList.toggle("open");
-          });
-      });
-
-      // Skript pro posun na danou sekci po kliknutí na odkazy v navbaru
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-
-      // Skript pro posun na danou sekci po kliknutí na tlačítko v hero sekci
-      function smoothScroll(target) {
-        document.querySelector(target).scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-
-      // Skript pro otevírání a zavírání mobilního menu
-      function toggleMenu() {
-        var mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.toggle("hidden");
-      }
-
-      function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-      }
-
-      window.addEventListener('scroll', function() {
-        var heroSection = document.getElementById('hero');
-        var scrollPosition = window.scrollY || window.pageYOffset;
-        var windowHeight = document.body.scrollHeight;
-        
-        if (scrollPosition > windowHeight / 2) {
-          heroSection.classList.add('disabled');
-        } else {
-          heroSection.classList.remove('disabled');
-        }
-      });
-    </script>
+    <script src="src/script.js" async defer></script>
     <!--Link na background s hvězdami-->
     <script src="src/stars.js" async defer></script>
   </body>
