@@ -1,4 +1,9 @@
+User-agent: Googlebot
+
+Disallow: /
+
 User-agent: *
+
 Allow: /
 
 Sitemap: https://www.site-generative.com/sitemap.xml
